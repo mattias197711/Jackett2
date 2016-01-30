@@ -22,14 +22,16 @@ cd to src\Jackett2
 npm install -g jspm
 npm install -g gulp
 npm install -g bower
+npm install
 jspm install -y
 ```
 7. Update the web tooling in Visual studio by going to Tools -> Options -> Projects and solutions -> External web tools
 ```
-Remove all the options apart from $(Path) then add
+Unmark all the options apart from $(Path) then add
 
 C:\Program Files\Git\bin
 C:\Program Files (x86)\nodejs
 ```
 8. Open the Jackett.sln in visual studio and wait for it to restore the Packages.
-9. Select debug profile web and try the app out.
+9. Either run gulp build from inside visual studio using the task runner or from the command line.
+10. Select debug profile web and try the app out.
