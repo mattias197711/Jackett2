@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0-*",
+  "description": "Jackett2.Irc Class Library",
+  "authors": [ "Dev" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1-beta-23516",
+        "System.Collections": "4.0.11-beta-23516",
+        "System.Linq": "4.0.1-beta-23516",
+        "System.Runtime": "4.0.21-beta-23516"
+      }
+    }
+  },
+  "dependencies": {
+    "AutoMapper": "4.2.0",
+    "Conditions": "2.0.1",
+    "IrcDotNet": "1.0.0-*",
+    "Jackett2.Core": "1.0.0-*",
+    "MediatR": "2.0.2",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+    "System.Xml.XDocument": "4.0.11-beta-23516"
+  }
+}

@@ -33,5 +33,6 @@ C:\Program Files\Git\bin
 C:\Program Files (x86)\nodejs
 ```
 8. Open the Jackett.sln in visual studio and wait for it to restore the Packages.
+9. Add Nuget source: https://www.myget.org/F/aspnetmaster/api/v3/index.json
 9. Either run gulp build from inside visual studio using the task runner or from the command line.
 10. Select debug profile web and try the app out.

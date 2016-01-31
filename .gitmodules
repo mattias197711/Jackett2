@@ -1,0 +1,3 @@
+[submodule "src/Jackett2/autodl-trackers"]
+	path = src/Jackett2/autodl-trackers
+	url = https://github.com/autodl-community/autodl-trackers.git
