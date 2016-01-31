@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Infrastructure;
 using Jackett2.Irc;
+using Swashbuckle.SwaggerGen;
 
 namespace Jackett2
 {
@@ -45,14 +46,31 @@ namespace Jackett2
 
             JackettIrcModule.Register(services);
             JackettCoreModule.Register(services);
+
+
+
+            services.AddSwaggerGen();
+            services.ConfigureSwaggerDocument(options =>
+            {
+                options.SingleApiVersion(new Info
+                {
+                    Version = "v1",
+                    Title = "Jackett2 API",
+                    Description = "Unstable dev api",
+                    TermsOfService = ""
+                });
+            });
+            services.ConfigureSwaggerSchema(options =>
+            {
+                options.DescribeAllEnumsAsStrings = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-             //loggerFactory.AddDebug();
-
+            //loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
             {
@@ -78,6 +96,9 @@ namespace Jackett2
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSwaggerGen();
+            app.UseSwaggerUi();
         }
 
         // Entry point for the application.

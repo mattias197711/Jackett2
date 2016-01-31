@@ -13,6 +13,7 @@ namespace Jackett2.Irc
         {
             collection.AddSingleton<IIRCService, IRCService>();
             collection.AddSingleton<IAutoDLProfileService, AutoDLProfileService>();
+            collection.AddSingleton<IIRCProfileService, IRCProfileService>();
         }
     }
 }

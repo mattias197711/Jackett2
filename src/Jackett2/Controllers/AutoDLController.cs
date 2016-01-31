@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Jackett2.Controllers
 {
+    [Route("/autodl")]
+    [Produces("application/json")]
     public class AutoDLController : Controller
     {
         IAutoDLProfileService autodlService;
@@ -17,20 +19,20 @@ namespace Jackett2.Controllers
             autodlService = a;
         }
 
-        //[HttpGet]
+        [HttpGet("Summary")]
         //[Route("AutoDL/Summary")]
         public List<NetworkSummary> Summary()
         {
             return autodlService.GetNetworks();
         }
 
-      //  [HttpGet]
+       [HttpGet]
         public List<AutoDLProfileSummary> Index()
         {
             return autodlService.GetProfiles();
         }
 
-       // [HttpPut]
+        [HttpPut]
         public IActionResult Put([FromBody]AutoDLProfileSummary profile)
         {
             autodlService.Set(profile);
