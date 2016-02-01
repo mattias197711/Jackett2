@@ -14,18 +14,18 @@ export class WebClient {
     }
 
     get(url: string) {
-        return this.http.get('../webapi/' + url + '?_t=' + new Date().getTime());
+        return this.http.get('../' + url + '?_t=' + new Date().getTime());
     }
 
     put(url: string, obj: any) {
-        return this.http.put('../webapi/' + url + '?_t=' + new Date().getTime(), JSON.stringify(obj));
+        return this.http.put('../' + url + '?_t=' + new Date().getTime(), JSON.stringify(obj));
     }
 
     delete(url: string) {
-        return this.http.delete('../webapi/' + url + '?_t=' + new Date().getTime());
+        return this.http.delete('../' + url + '?_t=' + new Date().getTime());
     }
 
     post(url: string, obj: any) { 
-        return this.http.post('../webapi/' + url + '?_t=' + new Date().getTime(), JSON.stringify(obj));
+        return this.http.post('../' + url + '?_t=' + new Date().getTime(), JSON.stringify(obj));
     }
 }

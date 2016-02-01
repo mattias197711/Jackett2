@@ -1,6 +1,6 @@
 ﻿import 'jquery';
 import 'ms-signalr-client';
-import 'jackett-hubs';
+import '../signalr/hubs';
 import {AutoDLService, AutoDLProfile} from './services/AutoDLService'
 import {autoinject} from 'aurelia-framework';
 

@@ -1,3 +1,8 @@
 *.suo
 /.vs/config/applicationhost.config
 *.user
+/src/Jackett2/src/services/*.js.map
+/src/Jackett2/src/services/*.js
+/src/Jackett2/src/resources/*.js.map
+/src/Jackett2/src/resources/*.js
+/src/Jackett2/src/resources

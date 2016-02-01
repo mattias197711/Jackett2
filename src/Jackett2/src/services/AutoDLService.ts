@@ -1,4 +1,4 @@
-﻿import {WebClient} from './services/WebClient';
+﻿import {WebClient} from 'services/WebClient';
 import {autoinject} from 'aurelia-framework'; 
 import {HttpClient, HttpResponseMessage} from 'aurelia-http-client';
 

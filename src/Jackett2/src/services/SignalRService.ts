@@ -2,7 +2,7 @@
 import {EventAggregator} from 'aurelia-event-aggregator';
 import 'jquery';
 import 'ms-signalr-client';
-import 'jackett-hubs';
+import '../signalr/hubs';
 import {IRCMessageCommand} from '../typings/Jackett2Signalr';
 
 @autoinject
