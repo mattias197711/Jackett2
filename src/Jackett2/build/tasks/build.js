@@ -8,6 +8,7 @@ var assign = Object.assign || require('object.assign');
 var notify = require("gulp-notify");
 var typescript = require('gulp-typescript');
 var tsc = require('typescript');
+var babel = require("gulp-babel");
 
 var tsProject = typescript.createProject('./tsconfig.json', { typescript: tsc });
 
@@ -20,8 +21,11 @@ gulp.task('build-system', function() {
     .pipe(plumber())
     .pipe(sourcemaps.init({loadMaps: true}))    
     .pipe(changed(paths.output, {extension: '.js'}))
-    .pipe(typescript(tsProject))  
-    .pipe(sourcemaps.write({includeContent: true}))
+    .pipe(typescript(tsProject))
+       .pipe(babel({
+       }))
+    .pipe(sourcemaps.write({ includeContent: true }))
+  
     .pipe(gulp.dest(paths.output));
 });
 

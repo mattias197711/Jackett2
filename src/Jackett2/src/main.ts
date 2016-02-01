@@ -3,8 +3,9 @@ import {Aurelia} from 'aurelia-framework';
 
 export function configure(aurelia: Aurelia) {
   aurelia.use
-    .standardConfiguration()
-    .developmentLogging();
+      .standardConfiguration()
+      .plugin('resources/MomentValueConverter', undefined)
+      .developmentLogging();
 
   //Uncomment the line below to enable animation.
   //aurelia.use.plugin('aurelia-animator-css');
@@ -12,5 +13,5 @@ export function configure(aurelia: Aurelia) {
   //Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
   //aurelia.use.plugin('aurelia-html-import-template-loader')
 
-  aurelia.start().then(a => a.setRoot());
+  aurelia.start().then(a => a.setRoot()); 
 }

@@ -7,6 +7,7 @@ var protractor = require('gulp-protractor').protractor;
 var typescript = require('gulp-typescript');
 var tsc = require('typescript');
 var del = require('del');
+var typescript = require('gulp-typescript');
 
 var tsProject = typescript.createProject('./tsconfig.json', {
   typescript: tsc,
@@ -28,6 +29,9 @@ gulp.task('clean-e2e', function() {
 gulp.task('build-e2e', ['clean-e2e'], function() {
   return gulp.src(paths.dtsSrc.concat(paths.e2eSpecsSrc))
     .pipe(typescript(tsProject))
+    .pipe(babel({
+        optional: ["runtime"]
+    }))
     .pipe(gulp.dest(paths.e2eSpecsDist));
 });
 

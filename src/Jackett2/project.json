@@ -27,7 +27,10 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
     "Jackett2.Irc": "1.0.0-*",
-    "Swashbuckle": "6.0.0-rc1-final"
+    "Swashbuckle": "6.0.0-rc1-final",
+    "Moment.js": "2.11.1",
+    "moment.TypeScript.DefinitelyTyped": "1.5.9",
+    "jquery.TypeScript.DefinitelyTyped": "2.8.8"
   },
 
   "commands": {
