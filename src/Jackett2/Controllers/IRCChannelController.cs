@@ -1,7 +1,7 @@
 ﻿using Jackett.Irc.Models;
 using Jackett.Irc.Models.DTO;
 using Jackett2.Irc.Services;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;

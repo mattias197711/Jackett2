@@ -1,6 +1,6 @@
 ﻿using Jackett.Irc.Models.AutoDL;
 using Jackett2.Irc.Services;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;

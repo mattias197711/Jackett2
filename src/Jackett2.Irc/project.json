@@ -2,27 +2,29 @@
   "version": "1.0.0-*",
   "description": "Jackett2.Irc Class Library",
   "authors": [ "Dev" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+
   "frameworks": {
-    "dnxcore50": {
-      "dependencies": {
-        "Microsoft.CSharp": "4.0.1-beta-23516",
-        "System.Collections": "4.0.11-beta-23516",
-        "System.Linq": "4.0.1-beta-23516",
-        "System.Runtime": "4.0.21-beta-23516"
-      }
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
     }
   },
+
   "dependencies": {
-    "AutoMapper": "4.2.0",
+    "AutoMapper": "4.2.1",
     "Conditions": "2.0.1",
     "IrcDotNet": "1.0.0-*",
     "Jackett2.Core": "1.0.0-*",
     "MediatR": "2.0.2",
-    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
-    "System.Xml.XDocument": "4.0.11-beta-23516"
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+    "System.Xml.XDocument": "4.0.11-rc2-24027",
+    "Microsoft.CSharp": "4.0.1-rc2-24027",
+    "System.Collections": "4.0.11-rc2-24027",
+    "System.Linq": "4.1.0-rc2-24027",
+    "System.Runtime": "4.1.0-rc2-24027"
   }
 }

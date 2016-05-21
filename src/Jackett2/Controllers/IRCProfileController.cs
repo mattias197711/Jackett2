@@ -1,6 +1,6 @@
 ﻿using Jackett.Irc.Models;
 using Jackett2.Irc.Services;
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +30,7 @@ namespace Jackett2.Controllers
         {
             var item = profileService.Get(id);
             if (item == null)
-                return HttpNotFound();
+                return NotFound();
             return Json(item);
         }
 

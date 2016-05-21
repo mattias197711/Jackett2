@@ -1,60 +1,108 @@
 {
   "userSecretsId": "Jackett2-1df5fca9-b862-4931-8867-c46d52bbed68",
   "version": "1.0.0-*",
-  "compilationOptions": {
-    "emitEntryPoint": true
-  },
+
 
   "dependencies": {
-    "EntityFramework.Commands": "7.0.0-rc1-final",
-    "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
-    "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
-    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
-    "Microsoft.AspNet.IISPlatformHandler": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Mvc": "6.0.0-rc1-final",
-    "Microsoft.AspNet.Mvc.TagHelpers": "6.0.0-rc1-final",
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-final",
-    "Microsoft.AspNet.Tooling.Razor": "1.0.0-rc1-final",
+    "Microsoft.NETCore.App": {
+      "version": "1.0.0-rc2-3002702",
+      "type": "platform"
+    },
+    "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
+    "Microsoft.AspNetCore.Razor.Tools": "1.0.0-preview1-final",
     "Microsoft.AspNet.SignalR.Server": "3.0.0-rc1-final",
-    "Microsoft.Extensions.CodeGenerators.Mvc": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.FileProviderExtensions": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": "1.0.0-preview1-final",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc2-final",
     "Jackett2.Irc": "1.0.0-*",
-    "Swashbuckle": "6.0.0-rc1-final",
-    "Moment.js": "2.11.1",
-    "moment.TypeScript.DefinitelyTyped": "1.5.9",
-    "jquery.TypeScript.DefinitelyTyped": "2.8.8"
+    "jquery.TypeScript.DefinitelyTyped": "3.0.6",
+    "Moment.js": "2.13.0",
+    "moment.TypeScript.DefinitelyTyped": "1.8.1",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final"
   },
 
-  "commands": {
-    "web": "Microsoft.AspNet.Server.Kestrel --server.urls=http://*:9000/",
-    "ef": "EntityFramework.Commands"
-  },
+
 
   "frameworks": {
-    "dnxcore50": {
-      "dependencies": {
-      }
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
     }
   },
 
-  "exclude": [
-    "wwwroot",
-    "node_modules"
-  ],
-  "publishExclude": [
-    "**.user",
-    "**.vspscc"
-  ],
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "preserveCompilationContext": true,
+    "compile": {
+      "include": [ "" ],
+      "exclude": [
+        "wwwroot",
+        "node_modules"
+      ]
+    }
+  },
+
   "scripts": {
-    "prepublish": [  "gulp clean", "gulp export" ],
+    "prepublish": [ "gulp clean", "gulp export" ],
     "watch": [ "gulp watch" ]
+  },
+
+
+  "tools": {
+    "Microsoft.AspNetCore.Razor.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+win8+dnxcore50"
+    },
+    "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+win8+dnxcore50"
+    },
+    "Microsoft.EntityFrameworkCore.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": [
+        "portable-net45+win8+dnxcore50",
+        "portable-net45+win8"
+      ]
+    },
+    "Microsoft.Extensions.SecretManager.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": "portable-net45+win8+dnxcore50"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "version": "1.0.0-preview1-final",
+      "imports": [
+        "portable-net45+win8+dnxcore50",
+        "portable-net45+win8"
+      ]
+    }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

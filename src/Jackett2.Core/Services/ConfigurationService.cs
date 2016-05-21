@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,11 +20,11 @@ namespace Jackett2.Core.Services
     public class ConfigurationService : IConfigurationService
     {
         IHostingEnvironment hosting;
-        IApplicationEnvironment app;
+        IHostingEnvironment app;
         ISerializeService serializeService;
         ILogger<ConfigurationService> logger;
 
-        public ConfigurationService(IHostingEnvironment h, IApplicationEnvironment a, ISerializeService s, ILogger<ConfigurationService> l)
+        public ConfigurationService(IHostingEnvironment h, IHostingEnvironment a, ISerializeService s, ILogger<ConfigurationService> l)
         {
             logger = l;
             hosting = h;
@@ -34,7 +34,7 @@ namespace Jackett2.Core.Services
 
         public string ApplicationFolder()
         {
-            return app.ApplicationBasePath;
+            return app.ContentRootPath;
         }
 
         public string GetAutoDLFolder()
