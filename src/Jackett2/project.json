@@ -31,7 +31,8 @@
     "jquery.TypeScript.DefinitelyTyped": "3.0.6",
     "Moment.js": "2.13.0",
     "moment.TypeScript.DefinitelyTyped": "1.8.1",
-    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final"
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final",
+    "Swashbuckle": "6.0.0-beta9"
   },
 
 

@@ -18,7 +18,7 @@
     "Conditions": "2.0.1",
     "IrcDotNet": "1.0.0-*",
     "Jackett2.Core": "1.0.0-*",
-    "MediatR": "2.0.2",
+    "MediatR": "2.1.0-beta-19",
     "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
     "System.Xml.XDocument": "4.0.11-rc2-24027",
